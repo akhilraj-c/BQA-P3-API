@@ -1,0 +1,331 @@
+body {
+  /* padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee; */
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+/* Ajay style starts here  */
+
+    .login-wrap {
+        height: 100vh;
+    }
+
+    .infograph-section {
+        padding: 65px 50px;
+    }
+
+    .infograph-section img {
+        width: 250px;
+    }
+
+    .login-section {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .form-signin {
+        width: 100%;
+        max-width: 330px;
+        min-width: 350px;
+        padding: 15px;
+        margin: auto;
+    }
+
+    .login-section .formctrl-input {
+        min-height: 30px;
+        font-size: 14px;
+        border: 1px solid #CCCFD2;
+        color: #000;
+        border-radius: 5px !important;
+    }
+
+    .formctrl-input::-webkit-input-placeholder {
+        /* Chrome */
+        color: #ddd;
+    }
+
+    .formctrl-input:-ms-input-placeholder {
+        /* IE 10+ */
+        color: #ddd;
+    }
+
+    .formctrl-input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #ddd;
+        opacity: 1;
+    }
+
+    .formctrl-input:-moz-placeholder {
+        /* Firefox 4 - 18 */
+        color: #ddd;
+        opacity: 1;
+    }
+
+    /* .formctrl-input:focus {
+    box-shadow: none;
+    border-color: inherit;
+    border-right-color: transparent;
+} */
+    .btn-login {
+        background-color: #3FD4AD;
+        color: #fff;
+        border: none;
+        min-height: 33px;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;
+        min-width: 115px;
+        display: inline-block;
+        border-radius: 20px;
+        text-transform: capitalize;
+    }
+
+    .btn-login:not(:disabled):not(.disabled):active:focus {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .btn-login:not(:disabled):not(.disabled):active {
+        background-color: #27b48f;
+    }
+
+    .btn-login:hover,
+    .btn-login:active {
+        background-color: #27b48f;
+    }
+
+    .input-group>.input-group-prepend>.inputgrp-text {
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+        border-left-color: transparent;
+    }
+
+    .input-group-prepend .inputgrp-text {
+        background-color: #fff;
+        border-left-color: transparent;
+        border-right-color: #000;
+        border-top-color: #000;
+        border-bottom-color: #000;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .input-group-prepend .inputgrp-text img {
+        width: 16px;
+    }
+
+    .forgot-pass {
+        padding-top: 10px;
+    }
+
+    .forgot-pass a {
+        text-decoration: none;
+        font-family: 'proxima_novabold';
+        font-size: 13px;
+        color: #00B3E3;
+    }
+
+    .project-head-lg {
+        font-family: 'proxima_novathin';
+        font-size: 30px;
+        padding: 10px 13px 0;
+        color: #484848;
+    }
+
+    .footer-head-pad {
+        padding-left: 40px;
+    }
+
+    .footer-content {
+        padding: 40px;
+    }
+
+    .footer-content p {
+        margin-bottom: 0;
+        font-size: 93%;
+        color: #484848;
+        padding-bottom: 50px;
+    }
+
+    .forgot-alert-padding {
+        padding-top: 10px;
+        margin: 10px;
+    }
+
+    .modal.footer-right .modal-dialog {
+        position: fixed;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+        width: 400px;
+    }
+
+    .modal.footer-right.fade .modal-dialog {
+        right: 0;
+        transition: opacity 0.3s linear, right 0.3s ease-out;
+    }
+
+    .modal.footer-right .modal-content {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .login-head {
+        padding: 0 15px;
+    }
+    .form-signin-heading {
+    font-size: 17px;
+    color: #701111;
+    font-weight: 500;
+    padding: 10px 0;
+}
+    .login-head .creat-accnt {
+        font-size: 15px;
+        font-weight: 500;
+        color: #394659;
+        margin: 15px 0;
+        margin-bottom: 0;
+    }
+
+    /* .login-head .creat-accnt::after{
+       content: '';
+    display: inline-block;
+    width: 47%;
+    height: 1px;
+    background-color: #ECECEC;
+    margin: 5px 0;
+    margin-left: 15px;
+} */
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+    }
+
+    .btn-container p {
+        color: #0083E2;
+        font-weight: 600;
+    }
+
+    .login-section  label {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #000;
+        font-weight: 400;
+    }
+
+
+    /* checkbox style starts here  */
+    .control {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .control input:checked~.control__indicator {
+        background: #3FD4AD;
+    }
+
+    .control__indicator {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: #e6e6e6;
+        border-radius: 50%;
+    }
+
+    .control input:checked~.control__indicator:after {
+        display: block;
+    }
+
+    .control--checkbox .control__indicator:after {
+        left: 7px;
+        top: 5px;
+        width: 5px;
+        height: 9px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+    .control__indicator:after {
+        content: '';
+        position: absolute;
+        display: none;
+    }
+
+    .f-14 {
+        font-size: 14px !important;
+        color: #8f8e8e;
+    }
+
+    .forgt-pswd {
+        font-size: 14px;
+        color: #8f8e8e;
+        margin-bottom: 0;
+    }
+
+    .sgnup {
+        font-size: 14px;
+        color: #8f8e8e;
+    }
+
+    .sgnup a {
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    /* Ajay style ends here  */

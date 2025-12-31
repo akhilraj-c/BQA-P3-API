@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: springfox-swagger-ui
+Implementation-Version: 3.0.0
+Created-By: 11.0.7 (AdoptOpenJDK)
+Built-With: gradle-6.5, groovy-2.5.11
+Build-Time: 2020-07-13T22:07:18-0500
+Built-By: dilipkrish
+Built-On: Dilips-MacBook-Pro.local/192.168.1.158
+SwaggerUi-Version: 3.26.2
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/beans">
+<head>
+	<title>API Endpoint List</title>
+</head>
+<body>
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-color: #aabcfe;
+            margin: 0px auto;
+            width: 80%;
+        }
+
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px 10px 15px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #ffffff;
+            color: #669;
+            background-color: #f3f3f3;
+            text-align: left;
+        }
+
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #ffffff;
+            color: #669;
+            background-color: #f3f3f3;
+            text-align: left;
+        }
+
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #89bf04;
+            color: #fff;
+            background-color: #89bf04;
+        }
+
+        .tg .tg-7dnc {
+            font-weight: bold;
+            text-align: center;
+            vertical-align: top;
+            background-color: #f59542;
+            color: #ffff;
+        }
+
+        .tg .tg-qv16 {
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            vertical-align: top
+        }
+
+        .tg .tg-0lax {
+            text-align: left;
+            vertical-align: top
+        }
+
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #fafafa !important;
+        }
+
+        .green-head {
+            background-color: #89bf04;
+            color: #ffff;
+        }
+
+        .tbl-wrp {
+            height: 100vh;
+            padding: 25px;
+        }
+
+        .table-head {
+            font-family: Open Sans, sans-serif;
+            color: #3b4151;
+            font-size: 25px;
+            text-align: center;
+            margin: 25px 0;
+            font-weight: 600;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <div class="container">
+        <div class="tbl-wrp">
+        <div class="table-head">Endpoint List</div>
+        <table class="tg ">
+                <caption> </caption>
+                <tr class="green-head">
+                    <th scope="col" class="tg-7dnc">SNO</th>
+                    <th scope="col" class="tg-7dnc">HTTP Method</th>
+                    <th scope="col" class="tg-7dnc">URL Pattern</th>
+                    <th scope="col" class="tg-7dnc">Name</th>
+                </tr>
+                <tr th:each="view : ${views}">
+                    <td th:text="${view.slNo}">SNO</td>
+                    <td th:text="${view.httpMethod}">HTTP Method</td>
+                    <td th:text="${view.url}">URL</td>
+                    <td th:text="${view.name}">Name</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="js/bootstrap.min.js"></script>
+</html>

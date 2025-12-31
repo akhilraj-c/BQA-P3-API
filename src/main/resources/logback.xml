@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <property name="PATH" value="./logs"/>
+    <property name="PATTERN"
+              value="%d{dd-MM-yyyy HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } [%t] %class{50} [%M-%L] : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/bqa_p2.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- daily role over -->
+            <fileNamePattern>${PATH}/old/mindtek.log.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <!-- maximum file size 10 MB -->
+            <maxFileSize>250MB</maxFileSize>
+            <!-- keep 30 days worth of history capped at 7GB total size -->
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>15GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+    </appender>
+    <appender name="SCHEDULER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/cron/cron.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- daily role over -->
+            <fileNamePattern>${PATH}/old/cron/cron.log.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <!-- maximum file size 10 MB -->
+            <maxFileSize>100MB</maxFileSize>
+            <!-- keep 30 days worth of history capped at 7GB total size -->
+            <maxHistory>1</maxHistory>
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="FILE" />
+    </root>
+
+    <logger name="com.mindteck" level="debug" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <logger name="scheduler" level="debug" additivity="false">
+        <appender-ref ref="SCHEDULER" />
+    </logger>
+
+</configuration>

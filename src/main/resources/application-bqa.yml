@@ -1,0 +1,93 @@
+#server
+server:
+  port: 8086
+  tomcat:
+    max-swallow-size: 100MB
+  basePath: ""
+  debug: true
+  servlet:
+    contextPath: ""
+
+#Database
+mindteck:
+  datasource:
+    jdbc-url: jdbc:mysql://nqfstg1.cdu3qvqsq21a.me-south-1.rds.amazonaws.com:3306/nqfuat3?useSSL=false
+    username: admin
+    password: n9IDKn9XQajQ56iY
+    driverClassName: com.mysql.cj.jdbc.Driver
+    minimumIdle: 2
+    maximumPoolSize: 1000
+  server:
+    host: 52.90.114.43
+    protocol: http
+  web:
+    url: http://dev.mindteck.world
+  aws:
+    sns:
+      enabled: false
+    email:
+      enabled: false
+    s3:
+      bucket: bqa-file-uploads
+      url: https://bqa-file-uploads.s3.me-south-1.amazonaws.com/
+      region: me-south-1
+      pre:
+        signed:
+          url:
+            expiry: 15 # value in minutes
+  google:
+    service:
+      file: firebase.json
+  jwt:
+    secret: mysecretkey
+  submissionDate: 90
+  institution:
+    defaultPassword: 1234
+
+cas:
+  datasource:
+    jdbc-url: jdbc:mysql://nqfstg1.cdu3qvqsq21a.me-south-1.rds.amazonaws.com:3306/nqfuat3?useSSL=false
+    username: admin
+    password: n9IDKn9XQajQ56iY
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+#Spring
+spring:
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: false
+        jdbc:
+          batch_size: 30
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: mindteck-learning-platform
+  jwt:
+    secret: a9a5d626c5f95d78d8d662a60ddf35a928e87d62f201ea017bd1d8ec4b64a0f4
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+#  flyway:
+#    locations:
+#      - classpath:/db/flyway/default
+#    out-of-order: true
+#    validate-on-migrate: false
+#    clean-disable: false
+#    baseline-on-migrate: true
+#    baseline-version: 1
+
+
+fromEmail: BQA - QP Support <nqf@bqa.gov.bh>
+cloud:
+  aws:
+    credentials:
+      secret-key: Q95i9eyk64st8De69C2DWk4Z7Xd11ulQvxHYt8dx
+      access-key: AKIAU6GDZIAYVMQIJSEK
+    region:
+      static: us-east-1
+
+security-key : 3xmpl3St@ticK3y!Ya2x+KkdcTibgorCd9GcIN2woB
+resetLink : https://www.bqa-nqf.gov.bh/qp/#/auth/reset/
