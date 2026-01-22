@@ -134,6 +134,96 @@ public class QualificationProfileData extends AbstractModel  implements Cloneabl
     @Column(name = "is_revalidation")
     public Integer isRevalidation = 0;
 
+//    @Column(name = "website_address")
+//    private String websiteAddress;
+//
+//    @Column(name = "address")
+//    private String address;
+
+    @Column(name = "included_in_other")
+    private String includedInOther;
+
+    @Column(name = "qualification_framework")
+    private String qualificationFramework;
+
+    @Column(name = "country_of_origin")
+    private String countryOfOrigin;
+
+    @Column(name = "qualification_level")
+    private String qualificationLevel;
+
+    @Column(name = "qualification_credit")
+    private String qualificationCredit;
+
+    @Column(name = "qualification_number")
+    private String qualificationNumber;
+
+    @Column(name = "qf_register_link")
+    private String qfRegisterLink;
+
+    @Column(name = "qualification_notes")
+    private String qualificationNotes;
+
+
+    @Column(name = "qualification_structure_description")
+    private String qualificationStructureDescription;
+
+    @Column(name = "qualification_structure_url")
+    private String qualificationStructureUrl;
+
+    @Column(name = "occupational_standards_description")
+    private String occupationalStandardsDescription;
+
+    @Column(name = "occupational_standards_url")
+    private String occupationalStandardsUrl;
+
+    @Column(name = "background_awarding_body_description")
+    private String backgroundAwardingBodyDescription;
+
+    @Column(name = "background_awarding_body_url")
+    private String backgroundAwardingBodyUrl;
+
+    @Column(name = "awarding_body_name")
+    private String awardingBodyName;
+
+    @Column(name = "awarding_body_website")
+    private String awardingBodyWebsite;
+
+//    @Column(name = "awarding_body_address")
+//    private String awardingBodyAddress;
+
+    @Column(name = "awarding_body_contact_name")
+    private String awardingBodyContactName;
+
+    @Column(name = "awarding_body_contact_position")
+    private String awardingBodyContactPosition;
+
+    @Column(name = "awarding_body_contact_number")
+    private String awardingBodyContactNumber;
+
+//    @Column(name = "awarding_body_contact_offcl_number")
+//    private String awardingBodyContactOffclNumber;
+
+    @Column(name = "awarding_body_contact_email")
+    private String awardingBodyContactEmail;
+
+    @Column(name = "offcl_contact_number")
+    private String offclContactNumber;
+
+    @Column(name = "providers")
+    private String providers;
+
+    @Column(name = "declaration_url")
+    private String declarationUrl;
+//    @OneToMany(
+//            mappedBy = "qualificationProfile",
+//            cascade = CascadeType.ALL,
+//            orphanRemoval = true
+//    )
+//    private List<QualificationProvider> providers;
+
+
+
 
     /**
      * Common columns

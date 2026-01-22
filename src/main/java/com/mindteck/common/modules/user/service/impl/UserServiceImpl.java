@@ -415,14 +415,17 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         request.getQualifications().forEach(qualification -> {
             InstituteForm instituteForm = new InstituteForm();
             instituteForm.setApplicantOrganizationName(request.getApplicantOrganizationName());
+            instituteForm.setInstitutionName(request.getApplicantOrganizationName());
             instituteForm.setQualificationTitle(qualification.getQualificationTitle());
             instituteForm.setProviders(qualification.getProviders() !=null ? qualification.getProviders().toString() : null);
             instituteForm.setAwardingBody(qualification.getAwardingBody());
-            instituteForm.setLevelAndCredit(qualification.getLevelAndCredit());
+            instituteForm.setLevel(qualification.getLevel());
+            instituteForm.setCredit(qualification.getCredit());
             instituteForm.setNumberOfUnitsCoursesModules(qualification.getNumberOfUnitsCoursesModules());
             instituteForm.setExpectedSubmissionDate(qualification.getExpectedSubmissionDate());
             instituteForm.setPlannedSubDate(qualification.getExpectedSubmissionDate()!=null? qualification.getExpectedSubmissionDate().toString() : null);
             instituteForm.setIncludedInOther(request.getQualificationIncludedOtherFramework());
+            instituteForm.setQualificationFramework(request.getQualificationFramework());
             instituteForm.setContactPersonNumber(request.getContactNumber());
             instituteForm.setContactPersonEmail(request.getContactEmail());
             instituteForm.setContactPersonTitle(request.getContactPosition());

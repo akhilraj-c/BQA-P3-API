@@ -39,8 +39,11 @@ public class InstituteForm extends AbstractModel implements Cloneable{
     @Column(name = "providers") // Added
     private String providers;   // String instead of List
 
-    @Column(name = "level_and_credit") // Added
-    private String levelAndCredit;
+    @Column(name = "level")
+    private String level;
+
+    @Column(name = "credit")
+    private String credit;
 
     @Column(name = "number_of_units_courses_modules") // Added
     private String numberOfUnitsCoursesModules;
@@ -239,6 +242,9 @@ public class InstituteForm extends AbstractModel implements Cloneable{
 
     @Column(name = "included_in_other")
     private String includedInOther;
+
+    @Column(name = "qualification_framework")
+    private String qualificationFramework;
 
     @Column(name = "qualification_size")
     private String qualificationSize;

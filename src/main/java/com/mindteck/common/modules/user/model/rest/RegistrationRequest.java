@@ -42,6 +42,9 @@ public class RegistrationRequest {
     @ApiModelProperty(example = "contactName", dataType = "String", position = 8)
     private String contactNumber;
 
+    @ApiModelProperty(example = "qualificationFramework", dataType = "String", position = 9)
+    private String qualificationFramework ;
+
 
     @SuperBuilder
     @Data
@@ -58,8 +61,11 @@ public class RegistrationRequest {
         @ApiModelProperty(value = "Providers offering the qualification")
         private List<String> providers;
 
-        @ApiModelProperty(example = "qwe", value = "Level and credit details", dataType = "String")
-        private String levelAndCredit;
+        @ApiModelProperty(example = "qwe", value = "Level details", dataType = "String")
+        private String level;
+
+        @ApiModelProperty(example = "qwe", value = " credit details", dataType = "String")
+        private String credit;
 
         @ApiModelProperty(example = "55", value = "Number of units/courses/modules", dataType = "String")
         private String numberOfUnitsCoursesModules;

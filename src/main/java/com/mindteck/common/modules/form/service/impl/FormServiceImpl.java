@@ -888,7 +888,8 @@ public class FormServiceImpl implements FormService {
                 .qualificationTitle(instituteForm.getQualificationTitle())
                 .awardingBody(instituteForm.getAwardingBody())
                 .providers(instituteForm.getProviders())
-                .levelAndCredit(instituteForm.getLevelAndCredit())
+                .level(instituteForm.getLevel())
+                .credit(instituteForm.getCredit())
                 .numberOfUnitsCoursesModules(instituteForm.getNumberOfUnitsCoursesModules())
                 .expectedSubmissionDate(instituteForm.getExpectedSubmissionDate())
                 .build();
@@ -896,6 +897,7 @@ public class FormServiceImpl implements FormService {
         GetFQDetailsResponseModel getFQDetailsResponseModel = GetFQDetailsResponseModel.builder()
                 .applicantOrganizationName(instituteForm.getApplicantOrganizationName())
                 .qualificationIncludedOtherFramework(instituteForm.getIncludedInOther())
+                .qualificationFramework(instituteForm.getQualificationFramework())
                 .contactName(instituteForm.getContactPersonName())
                 .contactPosition(instituteForm.getContactPersonTitle())
                 .contactNumber(instituteForm.getContactPersonNumber())

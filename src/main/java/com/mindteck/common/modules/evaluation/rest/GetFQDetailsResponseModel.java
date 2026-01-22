@@ -15,6 +15,7 @@ public class GetFQDetailsResponseModel {
     private String applicantOrganizationName;
     private List<Qualification> qualifications;
     private String qualificationIncludedOtherFramework;
+    private String qualificationFramework;
     private String contactName;
     private String contactPosition;
     private String contactNumber;
@@ -27,7 +28,8 @@ public class GetFQDetailsResponseModel {
         private String qualificationTitle;
         private String awardingBody;
         private String providers;
-        private String levelAndCredit;
+        private String level;
+        private String credit;
         private String numberOfUnitsCoursesModules;
         private Long expectedSubmissionDate;
 
